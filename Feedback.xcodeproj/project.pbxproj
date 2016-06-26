@@ -12,6 +12,7 @@
 		652F04DD1D1EDDC5001BF6A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652F04DB1D1EDDC5001BF6A2 /* Main.storyboard */; };
 		652F04DF1D1EDDC5001BF6A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 652F04DE1D1EDDC5001BF6A2 /* Assets.xcassets */; };
 		652F04E21D1EDDC5001BF6A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 652F04E01D1EDDC5001BF6A2 /* LaunchScreen.storyboard */; };
+		656F3ED61D1F117900BE6B60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656F3ED51D1F117900BE6B60 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		652F04DE1D1EDDC5001BF6A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		652F04E11D1EDDC5001BF6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		652F04E31D1EDDC5001BF6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656F3ED51D1F117900BE6B60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656F3ED61D1F117900BE6B60 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		652F04CB1D1EDDC5001BF6A2 = {
 			isa = PBXGroup;
 			children = (
+				656F3ED51D1F117900BE6B60 /* MessageUI.framework */,
 				652F04D61D1EDDC5001BF6A2 /* Feedback */,
 				652F04D51D1EDDC5001BF6A2 /* Products */,
 			);
@@ -96,6 +100,7 @@
 				TargetAttributes = {
 					652F04D31D1EDDC5001BF6A2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 24TZZ3APT2;
 					};
 				};
 			};
@@ -249,10 +254,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Feedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielseong.Feedback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +268,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Feedback/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielseong.Feedback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +297,7 @@
 				652F04E81D1EDDC5001BF6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
